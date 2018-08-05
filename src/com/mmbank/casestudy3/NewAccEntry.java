@@ -1,3 +1,4 @@
+//Interface to read entry data for new account
 package com.mmbank.casestudy3;
 
 public interface NewAccEntry {

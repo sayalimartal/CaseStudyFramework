@@ -13,6 +13,8 @@ public abstract class BankController {
 	public BankController(BankFactory bf) {
 		this.bf = bf;
 	}
+	
+	//Abstract methods to be defined in child classes
 	abstract public void createNewCurrentAccount(int accNo, String accHolderName, int accBal);
 	abstract public void createNewSavingAccount(int  accNo, String accHolderName, int accBal, boolean isSalaried);
 	abstract public BankAcc presentAccountToView(int accNo, String str);

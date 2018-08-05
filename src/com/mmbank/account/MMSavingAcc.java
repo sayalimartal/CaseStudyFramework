@@ -1,3 +1,4 @@
+//MMBank savings account
 package com.mmbank.account;
 
 public class MMSavingAcc extends SavingAcc {
@@ -7,7 +8,7 @@ public class MMSavingAcc extends SavingAcc {
 	}
 
 	@Override
-	public void withdraw(float amount) {
+	public void withdraw(float amount) {    //Overriding withdraw method for savings account
 		
 		if (isSalaried()) {
 			if ((getAccBal() - amount) >= 0)
@@ -23,14 +24,12 @@ public class MMSavingAcc extends SavingAcc {
 		}
 	}
 
-	//Display savings account details
+	//Display MMSavingAcc account details
 	@Override
 	public String toString() {
 		return "MMSavingAcc [isSalaried()=" + isSalaried() + ", toString()=" + super.toString() + ", getAccNo()="
 				+ getAccNo() + ", getAccHolderName()=" + getAccHolderName() + ", getAccBal()=" + getAccBal()
 				+ ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + "]";
 	}
-	
-	
-		
+			
 }

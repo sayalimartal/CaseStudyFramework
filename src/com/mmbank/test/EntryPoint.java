@@ -1,3 +1,4 @@
+//Entry point class to test MM bank functionalities
 package com.mmbank.test;
 
 import java.util.Scanner;
@@ -15,11 +16,11 @@ public class EntryPoint {
 
 	public static void main(String[] args) {
 
-		BankFactory mmBankFactory = new MMBankFactory();
-		BankController mmBankController = new MMBankController(mmBankFactory);
+		BankFactory mmBankFactory = new MMBankFactory(); //Instance of MMBankFactory
+		BankController mmBankController = new MMBankController(mmBankFactory); //Instance of MMBankController
 
-		mmBankController.createNewCurrentAccount(101, "Sayali", 5000);
-		mmBankController.createNewSavingAccount(101, "Sayali", 250000, true);
+		mmBankController.createNewCurrentAccount(101, "Sayali", 5000);  //Create new current and savings accounts
+		mmBankController.createNewSavingAccount(103, "Sayali", 250000, true);
 
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("---------CONSOLE---------");
@@ -27,15 +28,15 @@ public class EntryPoint {
 		int accNo = scanner.nextInt();
 		
 		scanner.close();
-		MMNewSaveAccEntryConsole a = new MMNewSaveAccEntryConsole();
-		NewSavingPojo newSavingPojo = a.readAccInfo(accNo);
+		MMNewSaveAccEntryConsole entryConsole = new MMNewSaveAccEntryConsole();
+		NewSavingPojo newSavingPojo = entryConsole.readAccInfo(accNo);
 		System.out.println(newSavingPojo);
 
-		MMSaveAccReport1 m1 = new MMSaveAccReport1();
-		m1.printReport();
+		MMSaveAccReport1 report1 = new MMSaveAccReport1(); 
+		report1.printReport();  //Print report of format report-I
 		
-		MMSaveAccReport2 m2 = new MMSaveAccReport2();
-		m2.printReport();
+		MMSaveAccReport2 report2 = new MMSaveAccReport2();
+		report2.printReport();  //Print report of format report-II
 	}
 
 }

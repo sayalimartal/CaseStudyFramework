@@ -1,3 +1,4 @@
+//POJO object for preserving data
 package com.mmbank.casestudy3;
 
 public class NewSavingPojo {
@@ -39,6 +40,7 @@ public class NewSavingPojo {
 		this.isSal = isSal;
 	}
 
+	//Display details
 	@Override
 	public String toString() {
 		return "NewSavingPojo [accHolderName=" + accHolderName + ", accNm=" + accNm + ", accBal=" + accBal + ", isSal="

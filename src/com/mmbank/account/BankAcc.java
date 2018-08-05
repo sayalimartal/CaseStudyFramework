@@ -45,6 +45,7 @@ public abstract class BankAcc {
 		this.accBal += amount;
 	}
 
+	//Display bank account details
 	@Override
 	public String toString() {
 		return "BankAcc [accNo=" + accNo + ", accHolderName=" + accHolderName + ", accBal=" + accBal + "]";
